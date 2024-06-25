@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'socialmedia.User'
 
 # Application definition
 
@@ -47,13 +48,13 @@ REST_FRAMEWORK = {
     }
 }
 
-CORS_ALLOWED_ORIGINS = {
-    "http://127.0.0.1:5173"
-}
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5173",
+]
 
-CSRF_TRUSTED_ORIGINS = {
-    "http://127.0.0.1:5173"
-}
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:5173",
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -62,9 +63,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangorestframework',
-    'djangorestframework_simplejwt',
+    'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders',
+    'socialmedia',
 ]
 
 MIDDLEWARE = [
