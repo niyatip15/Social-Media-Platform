@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from rest_framework.decorators import api_view,authentication_classes,permission_classes
+from rest_framework.permissions import IsAuthenticated
 from .forms import RegisterForm
 
 @api_view(['POST'])
@@ -19,3 +20,14 @@ def register(request):
     else:
         message = 'error'
     return JsonResponse({'message':message})
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def my_profile(request):
+    user = request.user
+    profile_data = {
+        'id': user.id,
+        'name': user.name, 
+        'email': user.email,
+    }
+    return JsonResponse(profile_data)
