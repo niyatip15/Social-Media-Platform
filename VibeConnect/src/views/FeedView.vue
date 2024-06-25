@@ -116,14 +116,14 @@
 </template>
 
 // <script>
-// import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
-// import Trends from '../components/Trends.vue'
+import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
+import Trends from '../components/Trends.vue'
 
-// export default {
-//     name: 'FeedView',
-//     components: {
-//         PeopleYouMayKnow,
-//         Trends,
-//     }
-// }
-// </script>
+export default {
+    name: 'FeedView',
+    components: {
+        PeopleYouMayKnow,
+        Trends,
+    }
+}
+</script>

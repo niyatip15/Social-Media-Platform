@@ -107,23 +107,23 @@
             </div>
         </div>
 
-        <!-- <div class="main-right col-span-1 space-y-4">
+        <div class="main-right col-span-1 space-y-4">
             <PeopleYouMayKnow />
 
             <Trends />
-        </div> -->
+        </div>
     </div>
 </template>
 
 // <script>
-// import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
-// import Trends from '../components/Trends.vue'
+import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
+import Trends from '../components/Trends.vue'
 
-// export default {
-//     name: 'SearchView',
-//     components: {
-//         PeopleYouMayKnow,
-//         Trends,
-//     }
-// }
-// </script>
+export default {
+    name: 'SearchView',
+    components: {
+        PeopleYouMayKnow,
+        Trends,
+    }
+}
+</script>
